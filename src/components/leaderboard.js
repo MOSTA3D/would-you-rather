@@ -13,8 +13,9 @@ class LeaderBoard extends React.Component{
                 }).map(user=>{
                     const [nAns, nQs] = [Object.keys(user.answers).length, user.questions.length];
                     return(
-                        <li className="leader-card">
+                        <li key={user.id} className="leader-card">
                             <img src={user.avatarURL} />
+                            <h2>{user.name} </h2>
                             <div>
                                 <p>answered questions : {nAns}</p>
                                 <p>Created questions : {nQs} </p>

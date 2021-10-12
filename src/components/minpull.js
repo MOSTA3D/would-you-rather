@@ -10,7 +10,7 @@ export default function MinPUll(props){
                 <div>
                     <h2>Would you rather</h2>
                     <p>...{props.question.optionOne.text.slice(0,15)}...</p>
-                    <Link to={"/pull/"+props.question.id}><button>View pull</button></Link>
+                    <Link to={"/questions/"+props.question.id}><button>View pull</button></Link>
                 </div>
             </div>
         </li>

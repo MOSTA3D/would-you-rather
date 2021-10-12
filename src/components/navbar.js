@@ -11,7 +11,7 @@ class Navbar extends React.Component{
                 <nav>
                     <ul id="navbar-list">
                         <Link to="/home"><li>Home</li></Link>
-                        <Link to="/new"><li>New question</li></Link>
+                        <Link to="/add"><li>New question</li></Link>
                         <Link to="/leaderboard"><li>Leaderboard</li></Link>
                     </ul>
                     {login&&(

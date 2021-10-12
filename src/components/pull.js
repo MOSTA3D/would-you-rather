@@ -52,12 +52,12 @@ class Pull extends React.Component{
                             <div className={this.isOp1(myQuestion.optionOne.votes, authedUser.id)?"marked":""}>
                                 would you rather {myQuestion.optionOne.text}
                                 <div>{opvt1} votes</div>
-                                <div>{100 * opvt1/(opvt1+opvt2)}%</div>
+                                <div>{(100 * opvt1/(opvt1+opvt2)).toFixed(2)}%</div>
                             </div>
                             <div className={this.isOp1(myQuestion.optionTwo.votes, authedUser.id)?"marked":""}>
                                 would you rather {myQuestion.optionTwo.text}
                                 <div>{opvt2} votes</div>
-                                <div>{100 * opvt2/(opvt1+opvt2)}%</div>
+                                <div>{(100 * opvt2/(opvt1+opvt2)).toFixed(2)}%</div>
                             </div>
                         </div>
                         </div>
@@ -85,7 +85,7 @@ class Pull extends React.Component{
 }
 
 function mapStateToProps({question,login, user}, props){
-    const myQuestion = question[props.match.params.id];
+    const myQuestion = question[props.match.params.question_id];
     const authedUser = login;
     const author = !!myQuestion&&user[myQuestion.author]
     return{

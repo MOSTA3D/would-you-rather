@@ -32,10 +32,10 @@ class App extends React.Component {
           <Route exact path="/home">
             <Home />
           </Route>
-          <Route exact path="/new">
+          <Route exact path="/add">
             <New />
           </Route>
-          <Route exact path="/pull/:id">
+          <Route exact path="/questions/:question_id">
             <Pull />
           </Route>
           <Route exact path="/leaderboard">

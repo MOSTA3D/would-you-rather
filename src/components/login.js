@@ -22,8 +22,8 @@ class Login extends React.Component{
                     <img src="https://www.wouldyouratherquestions.com/logo.png" alt="would you rather logo" />
                     <h2>Sign in</h2>
                 </div>
-                <select onChange={this.handleSelectChange} >
-                    <option disabled={true} selected value={null}>pick a user</option>
+                <select defaultValue="logout" onChange={this.handleSelectChange} >
+                    <option disabled={true} value={"logout"}>pick a user</option>
                     {user&&Object.values(user).map(users=><option key={users.id} value={users.id} style={{backgroundImage: "https://www.wouldyouratherquestions.com/logo.png"}}>{users.name}</option>)}
                 </select>
                 <button onClick={this.handleSubmit}>Sign in</button>
